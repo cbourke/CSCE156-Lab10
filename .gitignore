@@ -6,7 +6,9 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.settings/
+# eclipse needs .settings to see this is a 
+# dynamic web app project
+#.settings/
 .loadpath
 .recommenders
 buid/
