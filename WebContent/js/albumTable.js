@@ -9,7 +9,7 @@ $(document).ready(function() {
         success: function(json) {
         	json.albums.forEach(function(album) {
         		var row = "<tr>" + 
-        		          "<td><a href='albumDetail.jsp?albumId="+album.albumId+"'>" + album.title + "</a></td>" +
+        		          "<td><a href='albumDetail.html?albumId="+album.albumId+"'>" + album.title + "</a></td>" +
         		          "<td><a href='bandDetail.jsp?bandId="+album.band.bandId+"'>" + album.band.name + "</a></td>" +
         		          "<td>" + album.year + "</td>" +
         		          "</tr>";

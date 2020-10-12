@@ -18,6 +18,14 @@
     <url-pattern>/GetAlbums</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>AlbumDetailServlet</servlet-name>
+    <servlet-class>unl.cse.albums.AlbumDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AlbumDetailServlet</servlet-name>
+    <url-pattern>/GetAlbumDetail</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>AlbumAdderServlet</servlet-name>
     <servlet-class>unl.cse.albums.AlbumAdderServlet</servlet-class>
   </servlet>

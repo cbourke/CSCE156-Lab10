@@ -75,26 +75,10 @@ public class Album {
 
 		Album a = null;
 		
-		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-		} catch (InstantiationException e) {
-			System.out.println("InstantiationException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (IllegalAccessException e) {
-			System.out.println("IllegalAccessException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (ClassNotFoundException e) {
-			System.out.println("ClassNotFoundException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		}
-		
 		Connection conn = null;
 
 		try {
-			conn = DriverManager.getConnection(DatabaseInfo.url, DatabaseInfo.username, DatabaseInfo.password);
+			conn = DriverManager.getConnection(DatabaseInfo.URL, DatabaseInfo.USERNAME, DatabaseInfo.PASSWORD);
 		} catch (SQLException e) {
 			System.out.println("SQLException: ");
 			e.printStackTrace();
@@ -178,26 +162,10 @@ public class Album {
 	 */
 	public static List<Album> getAlbumSummaries() {
 		
-		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-		} catch (InstantiationException e) {
-			System.out.println("InstantiationException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (IllegalAccessException e) {
-			System.out.println("IllegalAccessException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (ClassNotFoundException e) {
-			System.out.println("ClassNotFoundException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		}
-		
 		Connection conn = null;
 
 		try {
-			conn = DriverManager.getConnection(DatabaseInfo.url, DatabaseInfo.username, DatabaseInfo.password);
+			conn = DriverManager.getConnection(DatabaseInfo.URL, DatabaseInfo.USERNAME, DatabaseInfo.PASSWORD);
 		} catch (SQLException e) {
 			System.out.println("SQLException: ");
 			e.printStackTrace();
@@ -249,6 +217,37 @@ public class Album {
 		return albums;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((albumId == null) ? 0 : albumId.hashCode());
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Album other = (Album) obj;
+		if (albumId == null) {
+			if (other.albumId != null)
+				return false;
+		} else if (!albumId.equals(other.albumId))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		return true;
+	}
+	
 	@Override
 	public String toString() {
 		return "Album [albumId=" + albumId + ", title=" + title + ", year="

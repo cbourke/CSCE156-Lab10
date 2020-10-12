@@ -43,7 +43,5 @@ public class AlbumServlet extends HttpServlet{
 		}
 	 
 	}
-	
-	private static final String staticJsonData = "{\"albums\":[{\"albumId\":1,\"title\":\"Neermind\",\"year\":1992,\"band\":{\"bandId\":20,\"name\":\"Nirvana\",\"members\":[]},\"albumNumber\":2,\"songTitles\":[]},{\"albumId\":2,\"title\":\"Something\",\"year\":1999,\"band\":{\"bandId\":10,\"name\":\"Foo Fighters\",\"members\":[]},\"albumNumber\":1,\"songTitles\":[]}]}";
 
 }

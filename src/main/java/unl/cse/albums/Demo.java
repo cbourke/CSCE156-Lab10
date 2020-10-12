@@ -2,7 +2,7 @@ package unl.cse.albums;
 
 import java.util.List;
 
-public class Test {
+public class Demo {
 
 	public static void main(String args[]) {
 
