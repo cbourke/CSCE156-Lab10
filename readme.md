@@ -136,8 +136,6 @@ file to use your MySQL credentials.
 
 ## 4. Testing, Submitting & Grading
 
-TODO:
-
 * Test your programs using the provided JUnit test suite(s).  Fix any
 errors and completely debug your programs.
 * Submit the following files through webhandin:

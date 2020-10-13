@@ -1,5 +1,7 @@
 package unl.cse.albums;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,16 +20,16 @@ public class AlbumAdderServlet extends HttpServlet {
 		String albumYear   = request.getParameter("albumYear");
 		String albumNumber = request.getParameter("albumNumber");
 
-		boolean result = AlbumAdder.addAlbumToDatabase(albumTitle, bandName, albumYear, albumNumber);
-
 		try {
-			if(result) {
-				response.sendRedirect("index.html");
-			} else {
-				response.sendRedirect("error.html");
-			}
-		} catch (Exception e) {
+			AlbumAdder.addAlbumToDatabase(albumTitle, bandName, albumYear, albumNumber);
+			response.sendRedirect("index.html");
 			
+		} catch (Exception e) {
+			try {
+				response.sendRedirect("error.html");
+			} catch (IOException e1) {
+				throw new RuntimeException(e1);
+			}
 		}
 	}
 	
