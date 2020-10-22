@@ -109,9 +109,9 @@ method as specified in the JavaDoc. Keep the following in mind.
 
 ```java
 String query = "INSERT RECORDS QUERY";
-PreparedStatement ps = ...;
-//prepare ps
-ps.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
+PreparedStatement ps = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+//prepare ps by setting any parameters
+ps.executeUpdate();
 
 //get the generated keys:
 ResultSet keys = ps.getGeneratedKeys();
