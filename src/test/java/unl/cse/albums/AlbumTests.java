@@ -1,7 +1,7 @@
 package unl.cse.albums;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * A suite of tests for the {@link #AlbumAdder} class.
@@ -15,7 +15,7 @@ public class AlbumTests {
 	 * 
 	 */
 	@Test
-	void addAlbumToDatabaseTest() {
+	public void addAlbumToDatabaseTest() {
 
 		int albumId = AlbumAdder.addAlbumToDatabase("Atrocity Exhibition", "Danny Brown", "2016", "4");
 
