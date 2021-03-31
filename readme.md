@@ -117,12 +117,12 @@ ps.executeUpdate();
 ResultSet keys = ps.getGeneratedKeys();
 
 //if we only expect one:
-rs.next();
-int key = rs.getInt(1);
+keys.next();
+int key = keys.getInt(1);
 
 //if we expect several:
-while(rs.next()) {
-  int key = rs.getInt(1);
+while(keys.next()) {
+  int key = keys.getInt(1);
   //do something with the key
 }
 ```
