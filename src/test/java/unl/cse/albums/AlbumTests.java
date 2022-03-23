@@ -21,10 +21,10 @@ public class AlbumTests {
 
 		Album actual = Album.getDetailedAlbum(albumId);
 		Assertions.assertNotNull(actual);
-		Assertions.assertEquals(actual.getAlbumId(), albumId);
-		Assertions.assertEquals(actual.getTitle(), "Atrocity Exhibition");
-		Assertions.assertEquals(actual.getYear(), 2016);
-		Assertions.assertEquals(actual.getBand().getName(), "Danny Brown");
+		Assertions.assertEquals(albumId, actual.getAlbumId());
+		Assertions.assertEquals("Atrocity Exhibition", actual.getTitle());
+		Assertions.assertEquals(2016, actual.getYear());
+		Assertions.assertEquals("Danny Brown", actual.getBand().getName());
 
 	}
 
