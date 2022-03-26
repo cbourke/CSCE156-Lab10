@@ -60,10 +60,16 @@ lab.
 ## 1. Getting Started
 
 In this lab you will continue to work with the Java Database
-Connectivity API (JDBC) by finishing some new functionality to the Album
-web application from the prior lab. If you need to, you can check out
-the project for this lab from GitHub at
-<https://github.com/cbourke/CSCE156-Lab10>.
+Connectivity API (JDBC) by adding new functionality to the Album
+web application from the prior lab. 
+
+Clone the project code for this lab from GitHub using the URL,
+<https://github.com/cbourke/CSCE156-Lab10>. Refer to Lab 1.0 for
+instructions on how to clone a project from GitHub.
+
+***Note*** Be sure that the Albums database is installed and includes
+the data from the SQL scripts from prior labs.
+
 
 ## 2. Overview 
 
