@@ -1,4 +1,4 @@
-package unl.cse.albums;
+package unl.soc.albums;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,7 +26,7 @@ public class AlbumServlet extends HttpServlet{
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		
-		List<Album> albums = Album.getAlbumSummaries();
+		List<Album> albums = AlbumLoader.getAlbumSummaries();
 	    JsonElement je = gson.toJsonTree(albums);
 	    JsonObject jo = new JsonObject();
 	    jo.add("albums", je);

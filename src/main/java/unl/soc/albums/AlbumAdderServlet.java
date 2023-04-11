@@ -1,4 +1,4 @@
-package unl.cse.albums;
+package unl.soc.albums;
 
 import java.io.IOException;
 

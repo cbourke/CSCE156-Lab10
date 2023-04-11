@@ -1,4 +1,4 @@
-package unl.cse.albums;
+package unl.soc.albums;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.Test;
@@ -19,7 +19,7 @@ public class AlbumTests {
 
 		int albumId = AlbumAdder.addAlbumToDatabase("Atrocity Exhibition", "Danny Brown", "2016", "4");
 
-		Album actual = Album.getDetailedAlbum(albumId);
+		Album actual = AlbumLoader.getDetailedAlbum(albumId);
 		Assertions.assertNotNull(actual);
 		Assertions.assertEquals(albumId, actual.getAlbumId());
 		Assertions.assertEquals("Atrocity Exhibition", actual.getTitle());

@@ -1,4 +1,4 @@
-package unl.cse.albums;
+package unl.soc.albums;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -27,7 +27,7 @@ public class AlbumDetailServlet extends HttpServlet{
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		
-		Album a = Album.getDetailedAlbum(albumId);
+		Album a = AlbumLoader.getDetailedAlbum(albumId);
 		if(a == null) {
 			try {
 				//alright alright alright

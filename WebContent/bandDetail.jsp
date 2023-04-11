@@ -1,4 +1,5 @@
-<%@ page import="unl.cse.albums.Band" %>
+<%@ page import="unl.soc.albums.Band" %>
+<%@ page import="unl.soc.albums.BandLoader" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
@@ -17,7 +18,7 @@
   } catch(Exception e) {
 	  bandId = -1;
   }
-  Band b = Band.getBand(bandId);
+  Band b = BandLoader.getBand(bandId);
 %>
 <h1><%=b.getName()%></h1>
 

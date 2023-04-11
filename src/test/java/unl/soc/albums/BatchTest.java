@@ -1,4 +1,4 @@
-package unl.cse.albums;
+package unl.soc.albums;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
