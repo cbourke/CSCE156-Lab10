@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import unl.soc.database.DatabaseInfo;
+
 public class BandLoader {
 
 	/**

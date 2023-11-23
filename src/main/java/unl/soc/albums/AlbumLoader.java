@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import unl.soc.database.DatabaseInfo;
+
 public class AlbumLoader {
 
 	/**
